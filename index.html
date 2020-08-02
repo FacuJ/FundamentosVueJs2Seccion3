@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="row">
+                <button class="btn btn-primary" @click='vote()'>
+                    Votar
+                </button>
+                <p>
+                    Cantidad de votos es <strong>{{votes}}</strong>
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <input type="text" v-model="name" class="from-control">
+                    <input type="text" v-model="lastName" class="from-control">
+                    <label class="from-control">{{completeName | Mayus }}</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="js/vue.js"></script>
+<script src="app.js"></script>
+
+</html>
